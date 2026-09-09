@@ -6,21 +6,13 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Figure figs = new Figure();
-        System.out.println("введите количество фигур");
-        int n = scanner.nextInt();
-        ArrayList<Figure> shapes = new ArrayList<>();
-
+        ArrayBubbleSort ABS = new ArrayBubbleSort();
         Random rand = new Random();
-        for (int i = 0; i < n; i++){
-            int fig_choice = rand.nextInt(2);
-            double num = rand.nextDouble(0, 10);
-            if (fig_choice == 0){
-                shapes.add(new Circle(num, num, num));
-            } else {
-                shapes.add(new Rectangle(num, num));
-            }
-        }
-        figs.shape_stat(shapes);
+        ArrayList<Integer> arr = new ArrayList<>();
+        int n = scanner.nextInt();
+        ABS.arr_fill(arr, n);
+        ABS.arr_show(arr);
+        ABS.bubble_sort(arr);
+        ABS.arr_show(arr);
     }
 }
