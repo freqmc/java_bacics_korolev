@@ -10,6 +10,7 @@
 Сравнить скорость работы с классами String, StringBuffer и StringBuilder на 10000 операциях конкатенации. Использовать класс java.util.Date.
 Проанализируйте программу и определите в какой последовательности будут выводиться надписи на экран
 
+```
 class Insect {
   int i = 9;
   int j;
@@ -38,3 +39,4 @@ public class Beetle extends Insect {
     Beetle b = new Beetle();
   }
 } ///:~
+```
