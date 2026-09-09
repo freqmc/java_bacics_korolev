@@ -4,8 +4,12 @@ import java.util.Random;
 public class ArrayBubbleSort {
     public void arr_fill(ArrayList<Integer> arr, int n){
         Random rand = new Random();
+        int num;
         for (int i = 0; i < n; i++){
-            int num = rand.nextInt(-1000, 1000);
+            do {
+                num = rand.nextInt(0, 20);
+            } while (num % 10 == 0);
+
             arr.add(num);
         }
     }
